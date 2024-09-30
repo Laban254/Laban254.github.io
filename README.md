@@ -1,7 +1,7 @@
 
 # Dev Kibe Blog
 
-Welcome to my personal blog powered by (Jekyll!)[https://jekyllrb.com/] This blog is a space where I share insights, tutorials, and experiences related to software development.
+Welcome to my personal blog powered by [Jekyll](https://jekyllrb.com/) and the [Start Bootstrap Clean Blog](https://startbootstrap.com/themes/clean-blog) theme! This blog is a space where I share insights, tutorials, and experiences related to software development.
 
 ## Table of Contents
 
