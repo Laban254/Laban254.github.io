@@ -1,0 +1,41 @@
+_site
+.sass-cache
+node_modules
+Gemfile.lock
+*.gem
+
+# Jekyll specific files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby specific files
+*.gem
+*.rbc
+*.ruby-version
+*.ruby-gemset
+Gemfile.lock
+
+# Logs
+log/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.swp
+*~
+
+# Ignore IDE and Editor-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build artifacts
+node_modules/
+vendor/
+
+# Ignore environment files
+.env
+.env.local
+.env.production
