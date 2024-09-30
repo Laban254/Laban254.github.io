@@ -1,17 +1,14 @@
 title:              Dev Kibe Blog
 email:              labanrotich6544@gmail.com
-description:        My Blog
-author:             Laban KIbet
-baseurl:            "/startbootstrap-clean-blog-jekyll"
-url:                "https://startbootstrap.github.io"
+description:        A blog sharing insights on software development
+author:             Laban Kibet
+baseurl:            "" # leave it empty if it's the root
+url:                "https://laban254.github.io"
 
 # Social Profiles
 twitter_username:   labanK_
 github_username:    Laban254  
 linkedin_username:  laban-rotich
-
-# Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
@@ -20,4 +17,4 @@ paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - jekyll-sitemap
