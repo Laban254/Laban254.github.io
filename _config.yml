@@ -12,6 +12,7 @@ linkedin_username:  laban-rotich
 
 # Build settings
 markdown:           kramdown
+github-pages: true
 kramdown:
   input: GFM
   syntax_highlighter: rouge
