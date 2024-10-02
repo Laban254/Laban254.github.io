@@ -21,6 +21,3 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-
-# Theme
-theme: beautiful-jekyll-theme  
