@@ -34,6 +34,7 @@ FastAPI provides built-in support for OAuth2, simplifying the process of impleme
 
 In FastAPI, you can utilize the `OAuth2PasswordBearer` class for password-based authentication and `OAuth2AuthorizationCodeBearer` for the authorization code flow. Here’s a simple example demonstrating how to define an OAuth2 password scheme:
 
+{{ "{% highlight python " }}%}
 ```python
 
     from fastapi import FastAPI, Depends, HTTPException
@@ -41,8 +42,11 @@ In FastAPI, you can utilize the `OAuth2PasswordBearer` class for password-based 
 
     app = FastAPI()
 ```
+{{ "{% endhighlight " }}%}
+
 #### Define the OAuth2 password bearer scheme
-```python
+<!-- ```python -->
+{% highlight python %}
     oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
     @app.post("/token")
@@ -52,7 +56,7 @@ In FastAPI, you can utilize the `OAuth2PasswordBearer` class for password-based 
         if not user:
             raise HTTPException(status_code=400, detail="Incorrect username or password")
         return {"access_token": create_access_token(user.username), "token_type": "bearer"}` 
-```
+{% endhighlight %}
 #### Step 2: Secure Endpoints
 
 Once the authentication mechanism is in place, you can secure your endpoints by requiring a valid token. Here’s how to implement it:
