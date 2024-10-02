@@ -2,7 +2,7 @@ title:              Dev Kibe's Blog
 email:              labanrotich6544@gmail.com
 description:        A blog sharing insights on software development
 author:             Laban Kibet
-baseurl:            "" # leave it empty if it's the root
+baseurl:            "" 
 url:                "https://laban254.github.io"
 
 # Social Profiles
@@ -21,3 +21,6 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+
+# Theme
+theme: beautiful-jekyll-theme  
