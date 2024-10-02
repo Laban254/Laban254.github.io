@@ -21,6 +21,13 @@ In today’s digital landscape, APIs (Application Programming Interfaces) play a
 7. **[Handling Security Vulnerabilities](#handling-security-vulnerabilities) 🚫**
 8. **[Conclusion](#conclusion) 🏁**
 
+{% highlight javascript linenos %}
+var foo = function(x) {
+  return(x + 5);
+}
+foo(3)
+{% endhighlight %}
+
 ## 1. Understanding OAuth2 🗝️
 ### What is OAuth2?
 
