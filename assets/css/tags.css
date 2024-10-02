@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the footer is at the bottom */
+    margin: 0; /* Removes default body margin */
+}
+
+.tags-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    margin-top: 40px; /* Add margin at the top for spacing */
+    flex-grow: 1; /* Allow tags-container to take available space */
+}
+
+.articles-list {
+    width: 70%; /* Adjust width of articles list */
+    margin-right: 20px; /* Space between articles list and table */
+}
+
+#tags-table {
+    width: 30%; /* Adjust width of the table */
+}
+
+table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+th, td {
+    padding: 8px; /* Padding for table cells */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #ddd; /* Border for cells */
+}
+
+th {
+    background-color: #f2f2f2; /* Background color for header */
+}
+
+a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* No underline on links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    padding: 10px; /* Padding for the footer */
+    text-align: center; /* Center text in footer */
+    background-color: #f2f2f2; /* Footer background color */
+    width: 100%; /* Full width for footer */
+}

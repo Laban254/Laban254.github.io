@@ -1,0 +1,34 @@
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans for body text */
+    font-size: 16px; /* Adjusted font size for body text */
+    line-height: 1.5; /* Slightly reduced line height for compactness */
+    color: #333; /* Dark gray for better readability */
+  }
+  
+  h1 {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for h1 headings */
+    font-size: 24px; /* Smaller size for h1 */
+    margin-bottom: 10px; /* Reduced margin for h1 */
+  }
+  
+  h2 {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for h2 headings */
+    font-size: 20px; /* Smaller size for h2 */
+    margin-bottom: 8px; /* Reduced margin for h2 */
+  }
+  
+  h3 {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for h3 headings */
+    font-size: 18px; /* Smaller size for h3 */
+    margin-bottom: 6px; /* Reduced margin for h3 */
+  }
+  
+  h4, h5, h6 {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for h4, h5, h6 headings */
+    font-size: 16px; /* Smaller size for h4, h5, h6 */
+    margin-bottom: 4px; /* Reduced margin for h4, h5, h6 */
+  }
+  
+
+  
