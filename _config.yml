@@ -11,15 +11,19 @@ github_username:    Laban254
 linkedin_username:  laban-rotich
 
 # Build settings
-# markdown:           kramdown
+markdown:           kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 paginate:           5
 paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-syntax-highlighting
 
 excerpt_separator: ""

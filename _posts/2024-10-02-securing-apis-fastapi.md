@@ -34,29 +34,26 @@ FastAPI provides built-in support for OAuth2, simplifying the process of impleme
 
 In FastAPI, you can utilize the `OAuth2PasswordBearer` class for password-based authentication and `OAuth2AuthorizationCodeBearer` for the authorization code flow. Here’s a simple example demonstrating how to define an OAuth2 password scheme:
 
-{{ "{% highlight python " }}%}
 ```python
 
-    from fastapi import FastAPI, Depends, HTTPException
-    from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from fastapi import FastAPI, Depends, HTTPException
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
-    app = FastAPI()
+app = FastAPI()
+
 ```
-{{ "{% endhighlight " }}%}
-
 #### Define the OAuth2 password bearer scheme
-<!-- ```python -->
-{% highlight python %}
-    oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+```python
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-    @app.post("/token")
-    async def login(form_data: OAuth2PasswordRequestForm = Depends()):
-        # Validate user credentials and return a token
-        user = fake_verify_user(form_data.username, form_data.password)
-        if not user:
-            raise HTTPException(status_code=400, detail="Incorrect username or password")
-        return {"access_token": create_access_token(user.username), "token_type": "bearer"}` 
-{% endhighlight %}
+@app.post("/token")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    # Validate user credentials and return a token
+    user = fake_verify_user(form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(status_code=400, detail="Incorrect username or password")
+    return {"access_token": create_access_token(user.username), "token_type": "bearer"}` 
+```
 #### Step 2: Secure Endpoints
 
 Once the authentication mechanism is in place, you can secure your endpoints by requiring a valid token. Here’s how to implement it:
