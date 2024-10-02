@@ -11,8 +11,7 @@ github_username:    Laban254
 linkedin_username:  laban-rotich
 
 # Build settings
-markdown:           kramdown
-github-pages: true
+# markdown:           kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
