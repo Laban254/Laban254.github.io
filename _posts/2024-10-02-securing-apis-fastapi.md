@@ -40,7 +40,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 app = FastAPI()
-```
+
 #### Define the OAuth2 password bearer scheme
 ```python
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
