@@ -1,51 +1,22 @@
-/* --- Code blocks --- */
+/* Style for code blocks */
+pre {
+  background-color: #282c34; /* Dark background for the code block */
+  color: #ffffff; /* White text for better contrast */
+  padding: 15px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  overflow: auto; /* Add scrollbars if the code is too long */
+}
 
+/* Style for inline code */
 code {
-    padding: 0.125rem 0.25rem;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    border-radius: 0.25rem;
-  }
-  
-  pre code {
-    padding: 0;
-    background-color: transparent;
-    border-radius: 0;
-  }
-  
-  pre {
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    border-radius: 0.25rem;
-    padding: 0.59375rem;
-  }
-  .highlight pre {
-    border: none;
-    background: none;
-    margin: 0;
-  }
-  .highlight > pre {
-    background-image: linear-gradient(
-      rgba(0,0,0,0.03), rgba(0,0,0,0.03) 1.5em, rgba(0,0,0,0.02) 1.5em, rgba(0,0,0,0.02) 3em);
-    background-size: auto 3em;
-    background-position-y: 0.625rem;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-left: 0.4375rem solid #444;
-  }
-  .highlight > pre:not([class~="highlight"]) { /* code block with line number */
-    padding: 0;
-  }
-  .highlight table,
-  .highlight tr,
-  .highlight td { /* to be removed after fixing table styles */
-    border: none;
-    background: none;
-    padding: 0;
-    margin: 0;
-  }
-  .highlight pre.lineno {
-    color: rgba(0,0,0,0.3);
-    border-radius: 0;
-    border-right: 2px solid #444;
-  }
-  
+  background-color: #e3e3e3; /* Light grey background for inline code */
+  color: #333333; /* Dark text */
+  padding: 2px 5px; /* Padding for inline code */
+  border-radius: 3px; /* Rounded corners */
+}
+
+/* Optional: Highlighting for specific languages (add more as needed) */
+.highlight .rouge-code {
+  background-color: #f0f0f0; /* Background for highlighted code */
+  border-left: 4px solid #007bff; /* Blue left border */
+}
