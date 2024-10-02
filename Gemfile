@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
 gem "jekyll", ">= 3.8.5"
-
-gem "rouge" # Add this line for syntax highlighting
+gem "beautiful-jekyll-theme", "6.0.1"  
+gem "rouge" 
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
