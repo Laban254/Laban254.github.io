@@ -22,5 +22,3 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-head:
-  - <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">

@@ -9,24 +9,18 @@ background: '/img/posts/fastapi-security.jpg'
 
 # Securing APIs: Best Practices with FastAPI 🔒
 
-In today’s digital landscape, APIs (Application Programming Interfaces) play a pivotal role in enabling communication between various software applications. However, with the increased reliance on APIs comes the heightened risk of security vulnerabilities. Securing APIs is crucial for protecting sensitive data, maintaining user trust, and ensuring compliance with regulations. FastAPI, a modern and efficient web framework for building APIs with Python, offers several features that facilitate secure API development. In this article, we will delve into best practices for securing APIs built with FastAPI, focusing on OAuth2, JSON Web Tokens (JWT), encryption techniques, rate-limiting, and managing security vulnerabilities such as CSRF (Cross-Site Request Forgery) and SQL Injection.
+In our increasingly connected world, APIs (Application Programming Interfaces) are essential for enabling communication between different software applications. As we rely more on these APIs, it’s important to recognize the security risks they pose. Protecting your APIs is vital for safeguarding sensitive data, building user trust, and meeting regulatory requirements.
+
+FastAPI is a powerful and modern web framework for building APIs in Python, designed with security in mind. In this article, we’ll explore best practices for securing your FastAPI applications. We'll cover key topics like `OAuth2` for authentication, `JSON Web Tokens (JWT)` for secure data transmission, encryption techniques to protect information, `rate limiting`, and strategies for preventing common vulnerabilities like `Cross-Site Request Forgery (CSRF)` and `SQL Injection.` Join us as we dive into these crucial security measures to help you develop safe and reliable APIs!
+
 ## Table of Contents
 
-1. **[Understanding OAuth2](#understanding-oauth2) 🗝️**
-2. **[Implementing OAuth2 in FastAPI](#implementing-oauth2-in-fastapi)**
-3. **[JSON Web Tokens (JWT)](#json-web-tokens-jwt) 🧾**
-4. **[Creating and Validating JWTs in FastAPI](#creating-and-validating-jwts-in-fastapi)**
-5. **[Encryption Techniques](#encryption-techniques) 🔐**
-6. **[Rate-Limiting](#rate-limiting) ⚖️**
-7. **[Handling Security Vulnerabilities](#handling-security-vulnerabilities) 🚫**
-8. **[Conclusion](#conclusion) 🏁**
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
+1. **[Understanding OAuth2](#1-understanding-oauth2-🗝️)**
+2. **[JSON Web Tokens (JWT)](#2-json-web-tokens-jwt-🧾)**
+3. **[Encryption Techniques](#3-encryption-techniques-🔐)**
+4. **[Rate-Limiting](#4-rate-limiting-⚖️)**
+5. **[Handling Security Vulnerabilities](#5-handling-security-vulnerabilities-🚫)**
+6. **[Conclusion](#conclusion-🏁)**
 
 ## 1. Understanding OAuth2 🗝️
 ### What is OAuth2?
@@ -69,7 +63,7 @@ Once the authentication mechanism is in place, you can secure your endpoints by 
 @app.get("/users/me")
 async def read_users_me(token: str = Depends(oauth2_scheme)):
     user = decode_access_token(token)
-    return user` 
+    return user
 ```
 In this example, the `/users/me` endpoint is protected and requires a valid access token for access. If the token is missing or invalid, the request will be denied.
 
@@ -90,7 +84,7 @@ Here’s how you can create a JWT after successful authentication:
 ```python
 
 
-`import jwt
+import jwt
 from datetime import datetime, timedelta
 
 SECRET_KEY = "your_secret_key"
@@ -104,21 +98,21 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
         expire = datetime.utcnow() + timedelta(minutes=15)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
-    return encoded_jwt` 
+    return encoded_jwt 
 ```
 #### Validating a JWT
 
 To validate a JWT, decode it and check for expiration:
 
 ```python
-`def decode_access_token(token: str):
+def decode_access_token(token: str):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         return payload
     except jwt.ExpiredSignatureError:
         raise HTTPException(status_code=401, detail="Token has expired")
     except jwt.JWTError:
-        raise HTTPException(status_code=401, detail="Invalid token")` 
+        raise HTTPException(status_code=401, detail="Invalid token")
 ```
 ### Benefits of Using JWT
 
@@ -156,7 +150,7 @@ decrypted_text = cipher_suite.decrypt(cipher_text)`
 To protect data in transit, always use HTTPS instead of HTTP. This ensures that data exchanged between the client and server is encrypted. You can easily set up HTTPS with FastAPI by using an ASGI server like `uvicorn` along with SSL certificates:
 
 ```bash
-`uvicorn main:app --host 0.0.0.0 --port 8000 --ssl-keyfile=key.pem --ssl-certfile=cert.pem` 
+uvicorn main:app --host 0.0.0.0 --port 8000 --ssl-keyfile=key.pem --ssl-certfile=cert.pem
 ```
 ## 4. Rate-Limiting ⚖️
 
@@ -170,7 +164,7 @@ While FastAPI does not include rate-limiting out of the box, you can implement i
 
 ```python
 
-`from fastapi import FastAPI
+from fastapi import FastAPI
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 
@@ -181,7 +175,7 @@ app = FastAPI()
 @app.get("/limited")
 @limiter.limit("5/minute")
 async def limited_route():
-    return {"message": "This route is rate-limited"}` 
+    return {"message": "This route is rate-limited"}
 ```
 In this example, the `limited_route` endpoint allows only five requests per minute from a single IP address.
 
@@ -201,7 +195,7 @@ To protect against CSRF attacks, you can implement CSRF tokens in your applicati
 
 ```python
 
-`from starlette.middleware.csrf import CSRFMiddleware
+from starlette.middleware.csrf import CSRFMiddleware
 
 app.add_middleware(
     CSRFMiddleware,
@@ -211,7 +205,7 @@ app.add_middleware(
 @app.post("/submit")
 async def submit_form(data: FormData, csrf: str = Depends(csrf_protect)):
     # Process form submission
-    ...` 
+    ...
 ```
 ### SQL Injection
 
@@ -227,10 +221,10 @@ To prevent SQL injection attacks, always use parameterized queries or an ORM (li
 
 ```python
 
-`from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session
 
 def get_user_by_id(db: Session, user_id: int):
-    return db.query(User).filter(User.id == user_id).first()` 
+    return db.query(User).filter(User.id == user_id).first()
 ```
 ### Input Validation
 
@@ -246,7 +240,7 @@ class User(BaseModel):
 @app.post("/users/")
 async def create_user(user: User):
     # Process user creation
-    ...` 
+    ...
   ```
 ## Conclusion 🏁
 

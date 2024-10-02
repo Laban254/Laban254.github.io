@@ -1,22 +1,21 @@
-/* Style for code blocks */
+/* Example styles for syntax highlighting */
+.highlight {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+/* Additional styles for code blocks */
 pre {
-  background-color: #282c34; /* Dark background for the code block */
-  color: #ffffff; /* White text for better contrast */
-  padding: 15px; /* Padding around the text */
-  border-radius: 5px; /* Rounded corners */
-  overflow: auto; /* Add scrollbars if the code is too long */
+  background-color: #2e2e2e;  /* Dark background for code blocks */
+  color: #f8f8f2;             /* Light text color */
+  padding: 15px;              /* Padding inside code blocks */
+  border-radius: 5px;        /* Rounded corners */
+  overflow: auto;             /* Enable scrolling if needed */
 }
 
-/* Style for inline code */
 code {
-  background-color: #e3e3e3; /* Light grey background for inline code */
-  color: #333333; /* Dark text */
-  padding: 2px 5px; /* Padding for inline code */
-  border-radius: 3px; /* Rounded corners */
-}
-
-/* Optional: Highlighting for specific languages (add more as needed) */
-.highlight .rouge-code {
-  background-color: #f0f0f0; /* Background for highlighted code */
-  border-left: 4px solid #007bff; /* Blue left border */
+  color: #66d9ef;             /* Color for inline code */
+  font-family: monospace;     /* Monospace font for code */
 }
