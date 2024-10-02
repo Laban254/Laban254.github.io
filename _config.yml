@@ -12,13 +12,14 @@ linkedin_username:  laban-rotich
 
 # Build settings
 # markdown:           kramdown
-markdown: redcarpet
-highlighter: pygments
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 paginate:           5
 paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+
+excerpt_separator: ""
