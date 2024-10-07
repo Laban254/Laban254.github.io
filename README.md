@@ -1,5 +1,5 @@
 
-# Dev Kibe Blog
+# Kibe's Blog
 
 Welcome to my personal blog powered by [Jekyll](https://jekyllrb.com/)! This blog is a space where I share insights, tutorials, and experiences related to software development.
 
