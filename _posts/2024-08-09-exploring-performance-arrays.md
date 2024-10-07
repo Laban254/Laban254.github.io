@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Exploring the Performance of Python Lists, NumPy Arrays, and Array Module Arrays 📊"
-date: 2024-10-02 10:00:00 +0000
+date: 2024-08-09 10:00:00 +0000
 categories: 
   - blog
 subtitle: "A comparative analysis of data structures for efficient programming."
