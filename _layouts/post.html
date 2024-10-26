@@ -2,22 +2,16 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-{% else %}
-  <header class="masthead">
-{% endif %}
-  <div class="overlay"></div>
-  <div class="container">
+<header class="masthead" style="padding: 20px 0;"> <!-- Keep padding for the header -->
+  <div class="container" style="padding: 5px 0;"> <!-- Adjusted padding for the container -->
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-heading">
-          <h1>{{ page.title }}</h1>
+          <h1 style="font-size: 2rem; margin: 0;">{{ page.title }}</h1> <!-- Set margin to 0 -->
           {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
+            <h2 class="subheading" style="font-size: 1.25rem; margin: 0;">{{ page.subtitle }}</h2> <!-- Set margin to 0 -->
           {% endif %}
-          <span class="meta" style="font-size: 0.9em;">
+          <span class="meta" style="font-size: 0.8em; margin-top: 10px;">
             <i class="fas fa-calendar-alt" style="font-size: 0.8em;"></i> {{ page.date | date: '%d %b %Y' }} &nbsp; 
             <i class="fas fa-user" style="font-size: 0.8em;"></i> <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a> &nbsp; 
             &middot; <i class="fas fa-clock" style="font-size: 0.8em;"></i> {% include read_time.html content=page.content %}

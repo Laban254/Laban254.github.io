@@ -30,5 +30,22 @@ body {
     margin-bottom: 4px; /* Reduced margin for h4, h5, h6 */
   }
   
+/* Custom styles for Highlight.js */
+pre {
+  background-color: #282c34; /* Dark background for pre elements */
+  padding: 15px; /* Padding for code blocks */
+  border-radius: 5px; /* Rounded corners */
+  overflow: auto; /* Scrollable if code is long */
+  border: 1px solid #444; /* Optional border */
+}
 
-  
+/* Custom styles for inline code */
+.hljs {
+  color: #abb2bf; /* Light text color */
+}
+
+
+
+
+
+
