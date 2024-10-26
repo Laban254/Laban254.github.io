@@ -5,7 +5,7 @@ date: 2024-03-30 10:00:00 +0000
 categories: 
   - blog
 subtitle: "Essential strategies for protecting your APIs in a digital landscape."
-background: '/img/posts/fastapi-security.jpg'
+# background: '/img/posts/fastapi-security.jpg'
 tags: 
   - FastAPI
   - Security

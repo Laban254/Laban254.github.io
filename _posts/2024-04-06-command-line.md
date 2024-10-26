@@ -5,7 +5,6 @@ date: 2024-04-06 10:00:00 +0000
 categories: 
   - blog
 subtitle: "Essential concepts for effective command line usage in Linux."
-background: '/img/posts/command-line.jpg'
 tags: 
   - Linux
   - Command Line

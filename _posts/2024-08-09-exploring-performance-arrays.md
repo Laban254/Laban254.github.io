@@ -5,7 +5,6 @@ date: 2024-08-09 10:00:00 +0000
 categories: 
   - blog
 subtitle: "A comparative analysis of data structures for efficient programming."
-background: '/img/posts/arrays-performance.jpg'
 tags: 
   - Python
   - NumPy

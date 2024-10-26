@@ -5,7 +5,6 @@ date: 2024-09-30 10:00:00 +0000
 categories:
   - blog
 subtitle: "Implementing secure access control strategies using RBAC in Django."
-background: '/img/posts/django-rbac.jpg'
 tags:
   - Django
   - Security
